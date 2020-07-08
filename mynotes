@@ -1,0 +1,88 @@
+Curso - Introdução ao Angular 8 - Notes
+=====================================================================================
+=====================================================================================                 
+assets/styles pré-configurados;
+assets  -> responsável por arquivos estáticos;
+styles  -> responsável por guardar os estilos globais da aplicação;
+===================================================================================== 
+index   -> página inicial da aplicação;
+main    -> responsável por iniciar a aplicação -> (bootstrap da aplicação (Hook));
+===================================================================================== 
+Em Angular a aplicação tem apenas uma página html (app-root);
+O Angular trabalha com módulos e componentes;
+===================================================================================== 
+Módulos -> limitador de contexto; (login, cadastro);
+Componentes -> Pequenos pedaços de código que irão fazer parte de um módulo;
+===================================================================================== 
+Propriedades de um componente:
+selector: 	gerador de tag (referência para o componente);
+templateUrl: 	HTML do componente;
+styleUrls: 	CSS do componente;
+tytle:		Título do componente;
+===================================================================================== 
+Angular 	--> Mais recursos para trabalhar com HTML;
+React  		--> Mais recursos para trabalhar com JS;
+===================================================================================== 
+Interpolação: Utlizar propriedades do angular dentro do HTML;
+OneWayDataBind: Somente exibição do valor da propriedade;
+TwoWayDataBind: Exibir e alterar o valor da propriedade;
+===================================================================================== 
+Todo componente precisa ser declarado no módulo corespondente;
+===================================================================================== 
+Métodos de ciclo de vida de um componente:
+ngOnChanges()
+ngOnInit()
+ngDoCheck()
+ngOnDestroy()
+=====================================================================================
+=====================================================================================
+Injeção de dependência (Utlizada para carregar a classe de serviço do componente)
+Carregamento = Classe de serviço + componente referente;
+===================================================================================== 
+Com a injeção de depêndencias, separa-se o conteúdo que será exibido no componente.
+===================================================================================== 
+O recurso twoWayDataBind pode ser utilizado para filtrar (Fazer pesquisas);
+===================================================================================== 
+Pipes: Recurso relacionado a forma de exibição de algum dado no template;
+Podemos criar Pipes personalizados para modificar a exibicação de um dado;
+=====================================================================================
+=====================================================================================
+=====================================================================================
+Caminho percorrido para  criação de um novo componente:
+---------------------------------------------------------------
+1. Criação do arquivo .ts (nome.component.ts);
+1.1 Importação do @Component (@angular/core);
+1.2 Configuração das propriedades do componente;
+---------------------------------------------------------------
+2. Criação do arquivo .html (nome.component.html);
+2.1 Configuração do html;
+---------------------------------------------------------------
+3. Declaração do novo componente no app.modules.ts;
+---------------------------------------------------------------
+4. configuração da tag no app.component.html;
+=====================================================================================
+=====================================================================================
+=====================================================================================
+Criação da primeira rota:
+1. Import do RouterModule;
+1.1 Configuração do RouterModule nos imports do app.module;
+1.2 forRoot([{path; redirectTo; pathMatch;}])
+1.3 Configuração do switch <router-outlet> no app.component;
+===================================================================================== 
+Criação de forms:
+Utilização de variável de template Ex: #courseName;
+===================================================================================== 
+Criação de validação do form:
+Utlização do Angular [ngClass];
+===================================================================================== 
+Fazendo Requisições em HTTP:
+Importação do Módulo de HTTP;
+Retorno padrão = Observable;
+===================================================================================== 
+Segregação dos módulos da aplicação:
+Criação dos módulos específicos;
+Importação de Componentes de acordo com o módulo;
+Criação da pasta shared: Utilizada para guardar componentes/módulos compartilhados;
+Criação da pasta core: Utilizada para guardar os componentes mais pesados;]
+Tratamento de erros: Dentro da pasta core;
+===================================================================================== ===================================================================================== 
